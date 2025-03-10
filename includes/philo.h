@@ -34,22 +34,17 @@ typedef struct s_philo
 	t_data			*data;
 }				t_philo;
 
-/*********************************** UTILS ************************************/
 int			print_error(char *msg);
 int			p_atoi(const char *s);
 long long	get_time(void);
 long long	get_time_from(long long time);
 void		wait_time(t_data *data, long long time);
 void		destroy_mutex(t_data *data);
-
-/************************************ INIT ************************************/
 int			check_args(int ac, char **av);
 void		init_data(int ac, char **av, t_data *data);
 void		init_philos(t_data *data, t_philo *philo);
 int			init_mutex(t_data *data);
 int			init_threads(t_data *data, t_philo *philo);
-
-/*********************************** TASKS ************************************/
 void		print_task(t_philo *philo, char *msg);
 int			p_eat(t_philo *philo, t_data *data);
 void		p_sleep(t_philo *philo);

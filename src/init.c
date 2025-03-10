@@ -1,6 +1,5 @@
 #include "../includes/philo.h"
 
-/************************* Initialize data structure **************************/
 void	init_data(int ac, char **av, t_data *data)
 {
 	data->num_of_philos = p_atoi(av[1]);
@@ -13,7 +12,6 @@ void	init_data(int ac, char **av, t_data *data)
 	data->is_a_philo_dead = 0;
 }
 
-/************************ Initialize philos structure *************************/
 void	init_philos(t_data *data, t_philo *philo)
 {
 	int	i;
@@ -31,7 +29,6 @@ void	init_philos(t_data *data, t_philo *philo)
 	}
 }
 
-/**************** Initialize eating, time, and is_dead mutexes ****************/
 static int	init_mutex3(t_data *data)
 {
 	int	i;
@@ -59,7 +56,6 @@ static int	init_mutex3(t_data *data)
 	return (1);
 }
 
-/**************** Initialize eating, time, and is_dead mutexes ****************/
 static int	init_mutex2(t_data *data)
 {
 	int	i;
@@ -85,7 +81,6 @@ static int	init_mutex2(t_data *data)
 	return (1);
 }
 
-/******************* Initializes forks and printing mutexes *******************/
 int	init_mutex(t_data *data)
 {
 	int	i;

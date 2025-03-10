@@ -1,6 +1,5 @@
 #include "../includes/philo.h"
 
-/***************** Print an error message on the error output *****************/
 int	print_error(char *msg)
 {
 	int	i;
@@ -14,7 +13,6 @@ int	print_error(char *msg)
 	return (0);
 }
 
-/************ Print an error message in case of invalid arguments *************/
 static int	print_args_error(void)
 {
 	print_error("Error: Invalid arguments.\n\nUsage: ./philo ");
@@ -24,7 +22,6 @@ static int	print_args_error(void)
 	return (0);
 }
 
-/*** Check if there is a correct number of arguments and if they are valids ***/
 int	check_args(int ac, char **av)
 {
 	int	i;
